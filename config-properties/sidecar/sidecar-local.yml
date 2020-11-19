@@ -12,7 +12,7 @@ sidecar:
   
 management:
   security:
-    enabled: false
+    enabled: false 
     
 zuul:
   routes:
