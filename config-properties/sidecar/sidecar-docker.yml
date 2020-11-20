@@ -19,3 +19,5 @@ zuul:
     wstore: 
       path: /wstore/**
       url: http://wsstore-service:3000
+
+msg : Hello world - this is from config server - docker Environment
