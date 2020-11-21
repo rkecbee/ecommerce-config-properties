@@ -1,0 +1,58 @@
+       
+eureka:
+  client:
+    serviceUrl:      
+       defaultZone: http://localhost:9000/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+sidecar:
+  port: 3000
+  health-uri: http://localhost:3000/health
+  
+management:
+  security:
+    enabled: false 
+    
+zuul:
+  routes:
+    wstore: 
+      path: /wstore/**
+      url: http://localhost:3000
+
+msg : Hello world - this is from config server - Development Environment
+
+server:
+  config: 
+    ip: 164.52.204.159
+    kafka:
+      port: 9092
+    zookeeper:
+      port: 2181
+    rabbitmq:
+      port: 5672
+      username: rabbit
+      password: rabbit
+      vhost: vhostrabbit
+    mongodb:
+      port: 20304
+      database: POC_ECOMMERCE
+      username: poc1
+      password: poc1@2020
+    redis:
+      port: 6379
+    elastic-search:
+      port: 9200
+    api:
+      login:
+        port: 8050
+      elastic-load:
+        port: 8052
+      elastic-read:
+        port: 8053
+      elastic-write:
+        port: 8055
+      order-shipping:
+        port: 8056
+      order-stock:
+        port: 8057
