@@ -2,25 +2,25 @@
 eureka:
   client:
     serviceUrl:      
-       defaultZone: http://localhost:9000/eureka
+       defaultZone: http://eureka-server:9000/eureka
     register-with-eureka: true
     fetch-registry: true
 
 sidecar:
-  port: 8050
-  health-uri: http://localhost:3000/health
+  port: 8056
+  health-uri: http://wsstore-service:3000/health
   
 management:
   security:
-    enabled: false 
+    enabled: false
     
 zuul:
   routes:
     wstore: 
       path: /wstore/**
-      url: http://localhost:3000
+      url: http://wsstore-service:3000
 
-msg : Hello world - this is from config server - Development Environment
+msg : Hello world - this is from config server - docker Environment
 
 server:
   config: 

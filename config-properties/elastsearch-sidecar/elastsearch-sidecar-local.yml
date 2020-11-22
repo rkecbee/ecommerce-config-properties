@@ -7,7 +7,7 @@ eureka:
     fetch-registry: true
 
 sidecar:
-  port: 8050
+  port: 8052
   health-uri: http://localhost:3000/health
   
 management:
