@@ -1,7 +1,7 @@
 
 eureka:
   instance:
-    hostname: localhost # override with environment variable
+    hostname: 164.52.204.159 # override with environment variable
   client:
     register-with-eureka: false
     fetch-registry: false
